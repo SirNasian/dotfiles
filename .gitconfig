@@ -1,0 +1,6 @@
+[user]
+	name = Nathan Iszlaub
+	email = nathan.iszlaub@gmail.com
+	signingkey = BFC7E54E88B0848E1D62449564F58FB4EA5AF7B2
+[commit]
+	gpgsign = true

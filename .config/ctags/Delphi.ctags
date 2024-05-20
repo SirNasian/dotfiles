@@ -1,0 +1,9 @@
+--langdef=Delphi
+--langmap=Delphi:.pas
+--regex-Delphi=/(\w+)\s*=\s*class/\1/c,class/
+--regex-Delphi=/(\w+)\s*=\s*record/\1/r,record/
+--regex-Delphi=/(\w+)\s*=\s*\(/\1/e,enum/
+--regex-Delphi=/function\s*(\w+)\s*[;\(]/\1/f,function/
+--regex-Delphi=/function\s*\w+\.(\w+)\s*[;\(]/\1/f,function/
+--regex-Delphi=/procedure\s*(\w+)\s*[;\(]/\1/p,procedure/
+--regex-Delphi=/procedure\s*\w+\.(\w+)\s*[;\(]/\1/p,procedure/

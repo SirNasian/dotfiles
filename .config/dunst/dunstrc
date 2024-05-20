@@ -1,0 +1,7 @@
+[global]
+corner_radius = 8
+gap_size = 4
+frame_width = 0
+transparency = 15
+background = "#282A2E"
+scale = 1.5
