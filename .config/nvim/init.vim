@@ -8,19 +8,18 @@ set tabstop=4 shiftwidth=0
 set nowritebackup
 set mouse=
 
-inoremap <expr><c-j> coc#pum#visible() ? coc#pum#next(1) : '<down>'
-inoremap <expr><c-k> coc#pum#visible() ? coc#pum#prev(1) : '<up>'
-nnoremap <silent>K   :call CocAction('definitionHover')<cr>
-nnoremap <silent>gd  <Plug>(coc-definition)
-nnoremap <silent>gr  <Plug>(coc-references)
-nnoremap <silent>gR  <Plug>(coc-rename)
-nnoremap <silent>gca <Plug>(coc-codeaction-selected)
+inoremap <c-j> <down>
+inoremap <c-k> <up>
 
 call plug#begin()
+	Plug 'hrsh7th/cmp-buffer'
+	Plug 'hrsh7th/cmp-nvim-lsp'
+	Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+	Plug 'hrsh7th/nvim-cmp'
 	Plug 'junegunn/fzf'
 	Plug 'junegunn/fzf.vim'
 	Plug 'mattia72/vim-delphi'
-	Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+	Plug 'neovim/nvim-lspconfig'
 	Plug 'sainnhe/everforest'
 	Plug 'stevearc/oil.nvim'
 	Plug 'tpope/vim-fugitive'
@@ -35,4 +34,28 @@ autocmd ColorScheme * highlight Normal   ctermbg=none guibg=none
 autocmd ColorScheme * highlight NormalNC ctermbg=none guibg=none
 colorscheme everforest
 
-lua require("oil").setup()
+lua <<EOF
+require("oil").setup()
+require("lsp-keybinds").setup()
+
+local lspconfig = require("lspconfig")
+local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+lspconfig.clangd.setup({ capabilities = lsp_capabilities })
+lspconfig.gdscript.setup({ capabilities = lsp_capabilities })
+lspconfig.jsonls.setup({ capabilities = lsp_capabilities })
+lspconfig.lua_ls.setup({ capabilities = lsp_capabilities })
+
+local nvim_cmp = require("cmp")
+nvim_cmp.setup({
+	sources = {
+		{ name = "nvim_lsp_signature_help" },
+		{ name = "nvim_lsp" },
+		{ name = "buffer" },
+	},
+	mapping = nvim_cmp.mapping.preset.insert({
+		["<c-j>"] = nvim_cmp.mapping.select_next_item(),
+		["<c-k>"] = nvim_cmp.mapping.select_prev_item(),
+		["<c-y>"] = nvim_cmp.mapping.confirm({ select = true }),
+	})
+})
+EOF
