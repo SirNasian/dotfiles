@@ -15,7 +15,7 @@ exec --no-startup-id dunst
 exec --no-startup-id picom
 
 # program binds
-bindsym $mod+Shift+Return exec --no-startup-id alacritty
+bindsym $mod+Shift+Return exec --no-startup-id kitty
 bindsym $mod+p exec --no-startup-id rofi -show run
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+s --release exec --no-startup-id scrot -s -e 'xclip -selection clipboard -t image/png -i $f && rm $f'
@@ -77,4 +77,5 @@ gaps outer -4
 
 # default floating windows
 for_window [class="Alacritty"] floating enable
+for_window [class="kitty"] floating enable
 for_window [class="org.remmina.Remmina"] floating enable
