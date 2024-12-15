@@ -7,7 +7,7 @@ font pango:monospace 8
 # default programs
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id pkill polybar || polybar
+exec --no-startup-id polybar
 exec --no-startup-id feh --bg-fill .wallpaper
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
@@ -65,7 +65,7 @@ bindsym $mod+Shift+0 move scratchpad
 # i3 binds
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+q exec i3-msg exit
-bindsym $mod+b exec --no-startup-id pkill polybar || polybar
+bindsym $mod+b exec --no-startup-id polybar-msg cmd toggle
 
 # borders
 default_border pixel 1
