@@ -29,3 +29,7 @@ vim.g.airline_symbols.dirty='⚡'
 vim.api.nvim_create_autocmd("ColorScheme", { pattern = "*", command = "highlight Normal   ctermbg=none guibg=none" } )
 vim.api.nvim_create_autocmd("ColorScheme", { pattern = "*", command = "highlight NormalNC ctermbg=none guibg=none" } )
 vim.cmd("colorscheme everforest")
+
+local git = require("custom.git-telescope")
+vim.keymap.set("n", "<leader>gb", git.checkout_branch)
+vim.keymap.set("n", "<leader>gm", git.merge_branch)

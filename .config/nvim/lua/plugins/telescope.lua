@@ -9,7 +9,6 @@ return {
 			{ "<leader>fg", function() builtin.live_grep() end},
 			{ "<leader>fG", function() builtin.live_grep({ grep_open_files = true }) end },
 			{ "<leader>fb", function() builtin.buffers() end },
-			{ "<leader>gb", function() builtin.git_branches() end },
 		}
 	end,
 	opts = {
