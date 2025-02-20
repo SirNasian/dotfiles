@@ -1,5 +1,4 @@
 require("config.lazy")
-require("oil").setup({})
 
 vim.cmd([[
 	set number relativenumber
