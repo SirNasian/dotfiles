@@ -5,9 +5,11 @@ return {
 	keys = function()
 		local builtin = require("telescope.builtin")
 		return {
-			{ "<leader>ff", function() builtin.find_files({ no_ignore = true }) end, { desc = "Telescope find files" } },
-			{ "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" } },
-			{ "<leader>fb", builtin.buffers, { desc = "Telescope buffers" } }
+			{ "<leader>ff", function() builtin.find_files({ no_ignore = true }) end },
+			{ "<leader>fg", function() builtin.live_grep() end},
+			{ "<leader>fG", function() builtin.live_grep({ grep_open_files = true }) end },
+			{ "<leader>fb", function() builtin.buffers() end },
+			{ "<leader>gb", function() builtin.git_branches() end },
 		}
 	end,
 	opts = {
