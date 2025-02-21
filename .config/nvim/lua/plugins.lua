@@ -6,6 +6,6 @@ return {
 	"tpope/vim-fugitive",
 	"tpope/vim-repeat",
 	"tpope/vim-surround",
-	"vim-airline/vim-airline",
+	{ "nvim-lualine/lualine.nvim", dependencies = { 'nvim-tree/nvim-web-devicons' }, config = true },
 	{ "stevearc/oil.nvim", opts = {} },
 }
