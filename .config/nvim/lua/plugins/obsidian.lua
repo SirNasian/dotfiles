@@ -1,9 +1,10 @@
 return {
 	"epwalsh/obsidian.nvim",
 	keys = {
-		{ "<leader>noi", function() vim.cmd("ObsidianQuickSwitch index") end },
+		{ "<leader>nos", function() vim.cmd("ObsidianQuickSwitch") end },
 		{ "<leader>noj", function() vim.cmd("ObsidianDailies") end },
 		{ "<leader>non", function() vim.cmd("ObsidianNew") end },
+		{ "<leader>no/", function() vim.cmd("ObsidianSearch") end },
 	},
 	opts = {
 		workspaces = { { name = "notes", path = "~/.obsidian/notes" } },
