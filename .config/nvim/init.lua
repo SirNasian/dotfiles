@@ -11,7 +11,6 @@ vim.cmd([[
 	set tabstop=4 shiftwidth=0
 	set nowritebackup
 	set mouse=
-	nnoremap <c-l> <cmd>nohlsearch<cr><cmd>redraw<cr>:<cr>
 ]])
 
 vim.api.nvim_create_autocmd("ColorScheme", { pattern = "*", command = "highlight Normal   ctermbg=none guibg=none" } )
