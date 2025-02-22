@@ -5,6 +5,9 @@ return {
 		{ "<leader>noj", function() vim.cmd("ObsidianDailies") end },
 		{ "<leader>non", function() vim.cmd("ObsidianNew") end },
 		{ "<leader>no/", function() vim.cmd("ObsidianSearch") end },
+		{ "<leader>now", function() vim.cmd("ObsidianWorkspace") end },
+		{ "<leader>nob", function() vim.cmd("ObsidianBacklinks") end },
+		{ "<leader>not", function() vim.cmd("ObsidianTags") end },
 	},
 	opts = {
 		workspaces = { { name = "notes", path = "~/.obsidian/notes" } },
