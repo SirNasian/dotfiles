@@ -11,7 +11,7 @@ return {
 	},
 	opts = {
 		workspaces = { { name = "notes", path = "~/.obsidian/notes" } },
-		daily_notes = { folder = "daily-notes" },
+		daily_notes = { folder = "Daily" },
 		follow_url_func = function (url) vim.fn.jobstart({ "xdg-open", url }) end,
 		note_id_func = function(title) return title end,
 		disable_frontmatter = true,
