@@ -181,3 +181,6 @@ configuration {
 }
 
 @theme ".config/rofi/launchers/type-3/style-1.rasi"
+window {
+    background-color: black / 50%;
+}
