@@ -6,6 +6,7 @@ return {
 	"tpope/vim-fugitive",
 	"tpope/vim-repeat",
 	"tpope/vim-surround",
-	{ "nvim-lualine/lualine.nvim", dependencies = { 'nvim-tree/nvim-web-devicons' }, config = true },
+	{ "folke/noice.nvim", opts = {}, dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
+	{ "nvim-lualine/lualine.nvim", opts = {}, dependencies = { 'nvim-tree/nvim-web-devicons' } },
 	{ "stevearc/oil.nvim", opts = {} },
 }
