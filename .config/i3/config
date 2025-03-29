@@ -19,6 +19,7 @@ bindsym $mod+Shift+Return exec --no-startup-id kitty
 bindsym $mod+p exec --no-startup-id rofi -show run
 bindsym $mod+Shift+c kill
 bindsym $mod+Shift+s --release exec --no-startup-id scrot -s -e 'xclip -selection clipboard -t image/png -i $f && rm $f'
+bindsym $mod+Escape --release exec --no-startup-id sh .lock.sh
 
 # window binds
 bindsym $mod+h focus left
