@@ -181,6 +181,11 @@ configuration {
 }
 
 @theme ".config/rofi/launchers/type-3/style-1.rasi"
+
+configuration {
+	modi: "run,drun,window";
+}
+
 window {
     background-color: black / 50%;
 }
