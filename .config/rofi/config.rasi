@@ -187,5 +187,5 @@ configuration {
 }
 
 window {
-    background-color: black / 50%;
+    background-color: black / 80%;
 }
