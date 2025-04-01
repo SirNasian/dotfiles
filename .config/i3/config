@@ -69,8 +69,8 @@ bindsym $mod+Shift+q exec i3-msg exit
 bindsym $mod+b exec --no-startup-id polybar-msg cmd toggle
 
 # borders
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 0
+default_floating_border pixel 0
 
 # gaps
 gaps inner 24
