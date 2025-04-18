@@ -9,6 +9,7 @@ lspconfig.glsl_analyzer.setup({ capabilities = lsp_capabilities })
 lspconfig.html.setup({ capabilities = lsp_capabilities })
 lspconfig.intelephense.setup({ capabilities = lsp_capabilities })
 lspconfig.jsonls.setup({ capabilities = lsp_capabilities })
+lspconfig.pyright.setup({ capabilities = lsp_capabilities })
 lspconfig.ts_ls.setup({ capabilities = lsp_capabilities })
 
 lspconfig.lua_ls.setup({
