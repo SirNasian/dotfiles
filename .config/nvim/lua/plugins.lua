@@ -9,6 +9,5 @@ return {
 	"tpope/vim-surround",
 	{ "folke/noice.nvim", opts = {}, dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
 	{ "nvim-lualine/lualine.nvim", opts = {}, dependencies = { 'nvim-tree/nvim-web-devicons' } },
-	{ "sirnasian/codeassist.nvim", opts = {} },
 	{ "stevearc/oil.nvim", opts = {} },
 }
