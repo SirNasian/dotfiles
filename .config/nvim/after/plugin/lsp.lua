@@ -1,18 +1,16 @@
-local lspconfig = require("lspconfig")
-local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+vim.lsp.enable("clangd")
+vim.lsp.enable("cmake")
+vim.lsp.enable("csharp_ls")
+vim.lsp.enable("eslint")
+vim.lsp.enable("gdscript")
+vim.lsp.enable("glsl_analyzer")
+vim.lsp.enable("html")
+vim.lsp.enable("intelephense")
+vim.lsp.enable("jsonls")
+vim.lsp.enable("pyright")
+vim.lsp.enable("ts_ls")
 
-lspconfig.clangd.setup({ capabilities = lsp_capabilities })
-lspconfig.cmake.setup({ capabilities = lsp_capabilities })
-lspconfig.eslint.setup({ capabilities = lsp_capabilities })
-lspconfig.gdscript.setup({ capabilities = lsp_capabilities })
-lspconfig.glsl_analyzer.setup({ capabilities = lsp_capabilities })
-lspconfig.html.setup({ capabilities = lsp_capabilities })
-lspconfig.intelephense.setup({ capabilities = lsp_capabilities })
-lspconfig.jsonls.setup({ capabilities = lsp_capabilities })
-lspconfig.pyright.setup({ capabilities = lsp_capabilities })
-lspconfig.ts_ls.setup({ capabilities = lsp_capabilities })
-
-lspconfig.lua_ls.setup({
+vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
 			runtime = {
