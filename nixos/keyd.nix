@@ -1,0 +1,47 @@
+{ config, lib, pkgs, ... }:
+
+{
+	services.keyd = {
+		enable = true;
+		keyboards = {
+			default = {
+				ids = [ "*" ];
+				settings = {
+					"main" = {
+						"leftshift" = "layer(shift)";
+						"rightshift" = "layer(shift)";
+						"leftcontrol" = "layer(control)";
+						"rightcontrol" = "layer(control)";
+						"capslock" = "layer(capslock)";
+					};
+					"capslock" = {
+						"backspace" = "delete";
+						"esc" = "`";
+						"h" = "left";
+						"j" = "down";
+						"k" = "up";
+						"l" = "right";
+						"1" = "f1";
+						"2" = "f2";
+						"3" = "f3";
+						"4" = "f4";
+						"5" = "f5";
+						"6" = "f6";
+						"7" = "f7";
+						"8" = "f8";
+						"9" = "f9";
+						"0" = "f10";
+						"-" = "f11";
+						"=" = "f12";
+					};
+					"shift:S" = {
+						"esc" = "~";
+					};
+					"control:C" = {
+						"esc" = "`";
+					};
+				};
+			};
+		};
+	};
+}
