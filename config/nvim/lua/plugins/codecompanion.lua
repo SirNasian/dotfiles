@@ -6,8 +6,8 @@ return {
 	},
 	opts = {
 		strategies = {
-			chat = { adapter = "openai" },
-			inline = { adapter = "openai" },
+			chat = { adapter = "copilot" },
+			inline = { adapter = "copilot" },
 		},
 	},
 }
