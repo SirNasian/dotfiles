@@ -17,6 +17,7 @@ exec --no-startup-id picom
 bindsym $mod+Shift+Return exec --no-startup-id kitty
 bindsym $mod+p exec --no-startup-id rofi -show run
 bindsym $mod+Shift+c kill
+bindsym $mod+Shift+r --release exec --no-startup-id sh .screenrecord.sh
 bindsym $mod+Shift+s --release exec --no-startup-id sh .screenshot.sh
 bindsym $mod+Escape --release exec --no-startup-id sh .lock.sh
 
@@ -63,7 +64,6 @@ bindsym $mod+0 scratchpad show
 bindsym $mod+Shift+0 move scratchpad
 
 # i3 binds
-bindsym $mod+Shift+r restart
 bindsym $mod+Shift+q exec i3-msg exit
 bindsym $mod+b exec --no-startup-id polybar-msg cmd toggle
 
