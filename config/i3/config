@@ -6,7 +6,6 @@ font pango:monospace 8
 
 # default programs
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id polybar
 exec --no-startup-id .wallpaper/cycle.sh
 exec --no-startup-id nm-applet
@@ -18,7 +17,7 @@ exec --no-startup-id picom
 bindsym $mod+Shift+Return exec --no-startup-id kitty
 bindsym $mod+p exec --no-startup-id rofi -show run
 bindsym $mod+Shift+c kill
-bindsym $mod+Shift+s --release exec --no-startup-id scrot -s -e 'xclip -selection clipboard -t image/png -i $f && rm $f'
+bindsym $mod+Shift+s --release exec --no-startup-id scrot -s -f -e 'xclip -selection clipboard -t image/png -i $f && rm $f'
 bindsym $mod+Escape --release exec --no-startup-id sh .lock.sh
 
 # window binds
