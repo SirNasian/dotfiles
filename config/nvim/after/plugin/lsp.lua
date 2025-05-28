@@ -1,15 +1,3 @@
-vim.lsp.enable("clangd")
-vim.lsp.enable("cmake")
-vim.lsp.enable("csharp_ls")
-vim.lsp.enable("eslint")
-vim.lsp.enable("gdscript")
-vim.lsp.enable("glsl_analyzer")
-vim.lsp.enable("html")
-vim.lsp.enable("intelephense")
-vim.lsp.enable("jsonls")
-vim.lsp.enable("pyright")
-vim.lsp.enable("ts_ls")
-
 vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
@@ -36,6 +24,34 @@ vim.lsp.config("lua_ls", {
 		},
 	},
 })
+
+vim.lsp.config("omnisharp", {
+	on_attach = function(client, bufnr)
+		local _ = require("omnisharp_extended")
+		local opts = { buffer = bufnr }
+		vim.keymap.set("n", "gd", _.lsp_definition,     opts)
+		vim.keymap.set("n", "gr", _.lsp_references,     opts)
+	end,
+})
+
+vim.lsp.config("vue_ls", {
+	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+	init_options = { vue = { hybridMode = false } },
+})
+
+vim.lsp.enable("clangd")
+vim.lsp.enable("cmake")
+vim.lsp.enable("eslint")
+vim.lsp.enable("gdscript")
+vim.lsp.enable("glsl_analyzer")
+vim.lsp.enable("html")
+vim.lsp.enable("intelephense")
+vim.lsp.enable("jsonls")
+vim.lsp.enable("lua_ls")
+vim.lsp.enable("omnisharp")
+vim.lsp.enable("pyright")
+vim.lsp.enable("ts_ls")
+vim.lsp.enable("vue_ls")
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	desc = "LSP Keybindings",

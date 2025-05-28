@@ -1,6 +1,6 @@
 return {
 	"github/copilot.vim",
-	"mattia72/vim-delphi",
+	"Hoffs/omnisharp-extended-lsp.nvim",
 	"neovim/nvim-lspconfig",
 	"sainnhe/everforest",
 	"segeljakt/vim-silicon",
