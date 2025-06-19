@@ -1,6 +1,7 @@
 return {
 	"github/copilot.vim",
 	"Hoffs/omnisharp-extended-lsp.nvim",
+	"jlcrochet/vim-razor",
 	"neovim/nvim-lspconfig",
 	"sainnhe/everforest",
 	"segeljakt/vim-silicon",
