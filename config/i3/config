@@ -17,9 +17,9 @@ exec --no-startup-id picom
 bindsym $mod+Shift+Return exec --no-startup-id kitty
 bindsym $mod+p exec --no-startup-id rofi -show run
 bindsym $mod+Shift+c kill
-bindsym $mod+Shift+r --release exec --no-startup-id sh .screenrecord.sh
-bindsym $mod+Shift+s --release exec --no-startup-id sh .screenshot.sh
-bindsym $mod+Escape --release exec --no-startup-id sh .lock.sh
+bindsym $mod+Shift+r --release exec --no-startup-id sh .dotfiles/screenrecord.sh
+bindsym $mod+Shift+s --release exec --no-startup-id sh .dotfiles/screenshot.sh
+bindsym $mod+Escape --release exec --no-startup-id sh .dotfiles/lock.sh
 
 # window binds
 bindsym $mod+h focus left
