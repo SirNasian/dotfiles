@@ -1,6 +1,6 @@
 set number relativenumber
 set cursorline colorcolumn=120 nowrap
-set conceallevel=2
+set conceallevel=0
 set list listchars=tab:»\ ,trail:·
 set completeopt=menuone,noinsert
 set grepprg=rg\ --vimgrep\ --ignore-case\ -e grepformat=%f:%l:%c:%m
