@@ -1,5 +1,6 @@
 vim.pack.add({
 	{ src = "https://github.com/akinsho/toggleterm.nvim" },
+	{ src = "https://github.com/mfussenegger/nvim-dap" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
 	{ src = "https://github.com/nvim-lua/plenary.nvim" }, -- required by codecompanion & telescope
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },

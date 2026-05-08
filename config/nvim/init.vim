@@ -12,6 +12,7 @@ set mouse=
 let g:mapleader = " "
 lua require("config.pack")
 lua require("config.lsp")
+lua require("config.dap")
 
 autocmd ColorScheme * highlight Normal   ctermbg=none guibg=none
 autocmd ColorScheme * highlight NormalNC ctermbg=none guibg=none
