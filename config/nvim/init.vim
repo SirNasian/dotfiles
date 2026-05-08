@@ -9,16 +9,9 @@ set tabstop=4 shiftwidth=0
 set nowritebackup
 set mouse=
 
-lua require("config.lazy")
+let g:mapleader = " "
+lua require("config.pack")
 lua require("config.lsp")
-lua require("config.telescope")
-
-nnoremap <leader><leader> <cmd>ToggleTerm direction=float<CR>
-nnoremap <c-l> <cmd>nohlsearch<Bar>diffupdate<Bar>NoiceDismiss<CR>
-inoremap <expr> <c-y> copilot#Accept()
-
-let g:copilot_filetypes = { "*": v:false }
-let g:copilot_no_tab_map = v:true
 
 autocmd ColorScheme * highlight Normal   ctermbg=none guibg=none
 autocmd ColorScheme * highlight NormalNC ctermbg=none guibg=none
