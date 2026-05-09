@@ -19,13 +19,17 @@ dap.configurations.cs = {
 		type = "netcoredbg",
 		name = "netcoredbg",
 		request = "launch",
+		console = "internalConsole",
 		program = function()
-			local path
 			local items = {}
-			local fd = vim.system({ "fd", "-I", ".dll$" }, {}):wait()
-			for x in fd.stdout:gmatch("[^\n]+") do items[#items + 1] = x end
-			vim.ui.select(items, {}, function(option) path = option end)
-			return path
+			local csproj = vim.fn.glob("**/*.csproj")
+			for x in csproj:gmatch("[^\n]+") do items[#items + 1] = x end
+			vim.ui.select(items, {}, function(x) csproj = x end)
+
+			-- TODO: consider AssemblyName in csproj (if set)
+			local base = vim.fn.fnamemodify(csproj, ":h")
+			local name = vim.fn.fnamemodify(csproj, ":t:r")
+			return vim.fn.glob(vim.fs.joinpath(base, "bin", "Debug", "*", name .. ".dll"))
 		end,
 	},
 }
