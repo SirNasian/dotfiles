@@ -10,6 +10,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" }, -- required by codecompanion
 	{ src = "https://github.com/olimorris/codecompanion.nvim" },
 	{ src = "https://github.com/sainnhe/everforest"},
+	{ src = "https://github.com/seblyng/roslyn.nvim" },
 	{ src = "https://github.com/stevearc/oil.nvim" },
 	{ src = "https://github.com/tpope/vim-fugitive" },
 	{ src = "https://github.com/tpope/vim-repeat" },
